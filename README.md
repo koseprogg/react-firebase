@@ -18,4 +18,6 @@ Vi har allerede en innføring i React liggende som kan sjekkes ut for å oppfris
 ### **Firebase**
   * Auth
   * Cloud Firestore
+  * Cloud Storage
   * Cloud Functions
+  * Deploye webapp
