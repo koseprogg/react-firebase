@@ -6,7 +6,7 @@ Dette repoet kommer til å inneholde en boilerplate som har fokus på å dokumen
 ## Innhold
 
 ### Prosjektidé
-For å ha noe konkret å jobbe med skal vi i dette prosjektet lage en side der man se sanger og artister folk har lagt inn. Alle brukere må kunne registrere seg og logge seg inn. De skal også ha muligheten til å se alle sangene i en form for liste format og når de trykker på en sang så skal de få opp detaljert vising av sangen. Et lignende view skal være tilgjengelig for artister. Man kan også slette sanger man har lagt inn selv.
+For å ha noe konkret å jobbe med skal vi i dette prosjektet lage en side der man se sanger og artister folk har lagt inn. Alle brukere må kunne registrere seg og logge seg inn. De skal også ha muligheten til å se alle sangene i en form for liste format og når de trykker på en sang så skal de få opp detaljert vising av sangen. Et lignende view skal være tilgjengelig for artister. Man kan også slette sanger og arister man har lagt inn selv. 
 
 ### REST Api Basics
 
