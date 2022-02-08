@@ -4,14 +4,14 @@ Dette repoet kommer til å inneholde en boilerplate som har fokus på å dokumen
 
 
 ## Innholdsliste
-* REST Api Basics
+### REST Api Basics
 
-* **Serverless arkitektur**
+### **Serverless arkitektur**
 
-* React 
+### React 
 Vi har allerede en innføring i React liggende som kan sjekkes ut for å oppfriske React skills: https://github.com/koseprogg/react-kurs
 
-* **Firebase**
+### **Firebase**
   * Auth
   * Cloud Firestore
   * Cloud Functions
