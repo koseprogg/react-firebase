@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from "./components/pagetemplate/Footer";
+import Navbar from './components/pagetemplate/Navbar';
+import { Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import OverviewPage from './pages/OverviewPage';
+import InputAbaRazzi from './pages/InputAbaRazzi';
+import InputAbaStory from './pages/InputAbaStory';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      <BrowserRouter>
+
+    <Navbar/>
+    <div className='content'>
+    <Routes>
+        <Route path="/" element={<OverviewPage />} />
+        <Route path="/input-abarazzi" element={<InputAbaRazzi />} />
+        <Route path="/input-abastory" element={<InputAbaStory />} />
+    </Routes>
+
     </div>
+    <div className='footer'>
+      <Footer/>
+    </div>
+    </BrowserRouter>
+
+  </>
   );
 }
 
