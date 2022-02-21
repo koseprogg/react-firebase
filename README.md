@@ -21,3 +21,10 @@ Vi har allerede en innføring i React liggende som kan sjekkes ut for å oppfris
   * Cloud Storage
   * Cloud Functions
   * Deploye webapp
+
+## Oppsett av Firebase
+
+1. Gå inn [her](https://console.firebase.google.com/u/0/) og lag et nytt Firebase-prosjekt. Velg de tjenestene du vil ha
+2. Gå inn på "Firestore Database" i menyen til venstre når du er inne i Firebase Console og sett opp dette. Her kan du velge regler som lar deg lese og skrive fritt i 30 dager
+3. Gå inn i dette repoet og installer Firebase sitt CLI via NPM med `npm install -g firebase-tools`
+4. Kjør `firebase init` og velg begge alternativer (med mellomrom) som omhandler "Firebase Hosting", samt den som omhandler "Cloud Firestore", "Cloud Storage", og "Cloud Functions".
