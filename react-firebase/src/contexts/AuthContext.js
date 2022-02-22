@@ -22,24 +22,23 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
 
     const auth = getAuth();
 
-    function login(email, password) {
-        return signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                //Signed in¨
-                const user = userCredential.user;
-                setCurrentUser(user);
-                setLoading(false);
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log("errorCode: " + errorCode, "errorMessage: " + errorMessage);
-            });
+    async function login(email, password) {
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            //Signed in¨
+            const user = userCredential.user;
+            setCurrentUser(user);
+            setLoading(false);
+        } catch (error) {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log("errorCode: " + errorCode, "errorMessage: " + errorMessage);
+        }
     }
 
     function logout() {
@@ -57,7 +56,7 @@ export function AuthProvider({ children }) {
             setLoading(false);
         });
         return unsubscribe;
-    }, []);
+    }, [auth]);
 
     useEffect(() => {
         if (currentUser) {
