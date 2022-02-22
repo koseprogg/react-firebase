@@ -13,18 +13,15 @@ import PrivateRoute from "./components/routes/PrivateRoute";
 function App() {
   return (
     <>
-    <AuthProvider>
       <BrowserRouter>
 
     <Navbar/>
     <div className='content'>
     <Routes>
         <Route path="/login" element={<LoginPage/>} />
-        <Route element={<PrivateRoute/>}>
           <Route path="/" element={<OverviewPage />} />
           <Route path="/input-abarazzi" element={<InputAbaRazzi />} />
           <Route path="/input-abastory" element={<InputAbaStory />} />
-        </Route>
     </Routes>
 
     </div>
@@ -32,7 +29,6 @@ function App() {
       <Footer/>
     </div>
     </BrowserRouter>
-    </AuthProvider>
 
   </>
   );

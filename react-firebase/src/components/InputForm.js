@@ -50,17 +50,22 @@ const InputForm = (props) => {
         </Grid>
         
         <Grid item>
-          <TextField
-            id="image-src"
-            name="imageSrc"
-            label="Image Src"
-            type="text"
-            value={formValues.imageSrc}
-            onChange={handleInputChange}
-          />
+        <input
+        type="file"
+        accept="image/*"
+        style={{ display: 'none' }}
+        id="contained-button-file"
+        name="imageSrc"
+        value={formValues.imageSrc}
+      />
+      <label htmlFor="contained-button-file">
+        <Button style={{marginTop:"15px"}} variant="contained" color="primary" component="span">
+          Upload picture
+        </Button>
+      </label>
         </Grid>
    
-        <Button variant="contained" color="primary" type="submit">
+        <Button style={{marginTop: "15px"}} variant="contained" color="primary" type="submit">
           Submit
         </Button>
       </Grid>
