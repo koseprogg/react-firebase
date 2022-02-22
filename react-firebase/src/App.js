@@ -6,10 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 import OverviewPage from './pages/OverviewPage';
 import InputAbaRazzi from './pages/InputAbaRazzi';
 import InputAbaStory from './pages/InputAbaStory';
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (
     <>
+        <AuthProvider>
       <BrowserRouter>
 
     <Navbar/>
@@ -25,6 +27,7 @@ function App() {
       <Footer/>
     </div>
     </BrowserRouter>
+    </AuthProvider>
 
   </>
   );
